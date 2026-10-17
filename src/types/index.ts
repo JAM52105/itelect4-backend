@@ -36,3 +36,27 @@ export interface Item {
   createdAt: Date;
   updatedAt: Date;
 }
+
+export interface Course {
+  code: string;
+  title: string;
+  units: number;
+  semester: string;
+}
+
+export type CourseDoc = Pick<Course, "code" | "title" | "units" | "semester">;
+
+export interface Submission {
+  userId: Types.ObjectId;
+  courseCode: string;
+  repoUrl: string;
+  submittedAt: Date;
+  score?: number;
+}
+
+export interface Claim {
+  userId: Types.ObjectId;
+  itemId: Types.ObjectId;
+  claimedAt: Date;
+  verified: boolean;
+}
