@@ -7,6 +7,7 @@ import itemRouter from "./routes/items.js";
 import submissionRouter from "./routes/submissions.js";
 import { errorHandler, notFoundHandler } from "./middleware/errors.js";
 import { connectDB } from "./config/db.js";
+import aiRouter from "./routes/ai.js";
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.use("/api/courses", courseRouter);
 app.use("/api/submissions", submissionRouter);
 app.use("/api/claims", claimRouter);
 app.use("/api/items", itemRouter);
+app.use("/api/ai", aiRouter);
 
 app.use(notFoundHandler);
 app.use(errorHandler);
