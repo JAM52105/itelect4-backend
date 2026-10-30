@@ -1,3 +1,5 @@
+[![CI](https://github.com/JAM52105/itelect4-backend/actions/workflows/ci.yml/badge.svg)](https://github.com/JAM52105/itelect4-backend/actions/workflows/ci.yml)
+
 # ITELEC4 Backend
 
 Express and MongoDB API for the ITELEC4 campus learning project.
